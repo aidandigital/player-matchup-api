@@ -16,6 +16,7 @@ const CLIENT_URL = process.env.CLIENT_URL;
 app.use(cors({
   origin: CLIENT_URL,
   optionsSuccessStatus: 200, // some legacy browsers (IE11, some SmartTVs) won't work with 204
+  credentials: true,
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
 }));
 app.use(helmet());
